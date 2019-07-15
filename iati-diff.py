@@ -3,8 +3,7 @@ import requests, shutil, os
 from lxml import etree
 from xmldiff import main, formatting
 
-
-tree = ET.parse('activity-list(2).xml')
+tree = ET.parse(input('1) Insert the name of the file to be compared: ') + '.xml')
 root = tree.getroot()
 
 elemList = []
