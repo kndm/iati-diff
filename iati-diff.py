@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
-import requests, shutil, os
+import requests, shutil, os, sys
 from lxml import etree
 from xmldiff import main, formatting
 
-tree = ET.parse(input('1) Insert the name of the file to be compared: ') + '.xml')
+tree = ET.parse(sys.argv[1])
 root = tree.getroot()
 
 elemList = []
@@ -29,7 +29,7 @@ for elem in tree.iter():
 		current_child = ET.SubElement(new_data, elem.tag)
 		current_child.text = elem.text
 		new_data.append(current_child)
-		with open(current_identifier + '.xml', 'wb') as file:
+		with open('./activities/' + current_identifier + '.xml', 'wb') as file:
 			print(new_data)
 			file.write(ET.tostring(new_data))
 
