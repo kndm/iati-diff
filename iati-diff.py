@@ -27,9 +27,6 @@ for elem in tree.iter():
 		current_identifier = elem.text
 		new_data_identifier.text = current_identifier
 
-
-
-
 	if recording == True and elem.tag != 'iati-identifier':
 		current_child = ET.SubElement(new_data, elem.tag)
 		current_child.text = elem.text
@@ -41,4 +38,22 @@ for elem in tree.iter():
 				file.write(ET.tostring(new_data, pretty_print=True))
 
 
+fileList = os.listdir("./activities/")
 
+elemList = [str(element).replace(".xml", "") for element in fileList]
+
+logging.debug("Element List is: {}".format(elemList)) 
+
+first = None
+
+formatter = formatting.DiffFormatter(pretty_print=True)
+
+for filename in elemList:
+	datastore_xml_url = 'http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=' + str(filename)
+	response = requests.get(datastore_xml_url)
+	with open('./datastore/' + filename + '.xml', 'wb') as file:
+		file.write(response.content)
+
+	with open('./differences/' + filename + '.txt', 'w') as diff_file:
+		for line in main.diff_files('./datastore/' + filename + '.xml' , './activities/' + filename + '.xml', formatter=formatter):
+			diff_file.write(line)
