@@ -1,0 +1,5 @@
+# Ignore debug file
+debug.txt
+
+# Ignore env file
+.env
