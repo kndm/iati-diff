@@ -1,0 +1,10 @@
+# Ignore debug file
+debug.txt
+
+# Ignore env file
+.env
+
+# Ignore xml files in subfolders
+acitivites/*
+differences/*
+datastore/*
