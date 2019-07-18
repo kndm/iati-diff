@@ -8,6 +8,11 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 
 tree = ET.parse(sys.argv[1])
 root = tree.getroot()
+path_activities = "./activities/"
+path_differences = "./differences/"
+path_datastore = "./datastore/"
+
+
 
 current_identifier = ''
 recording = False
@@ -41,6 +46,7 @@ for elem in tree.iter():
 fileList = os.listdir("./activities/")
 
 elemList = [str(element).replace(".xml", "") for element in fileList]
+elemList.remove('.gitignore')
 
 logging.debug("Element List is: {}".format(elemList)) 
 
