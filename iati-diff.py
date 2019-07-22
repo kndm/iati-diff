@@ -14,7 +14,8 @@ path_datastore = "./datastore/"
 
 def main():
 	recording = False
-	tree = ET.parse(sys.argv[1])
+	parser = ET.XMLParser(remove_blank_text=True)
+	tree = ET.parse(sys.argv[1], parser=parser)
 	root = tree.getroot()
 	current_identifier = ''
 
@@ -54,15 +55,28 @@ def main():
 
 	formatter = formatting.DiffFormatter(normalize=formatting.WS_BOTH, pretty_print=False)
 
+	newf=""
+
 	for filename in elemList:
 		datastore_xml_url = 'http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=' + str(filename)
 		response = requests.get(datastore_xml_url)
 		with open(path_datastore + filename + '.xml', 'wb') as file:
 			file.write(response.content)
 
-		with open(path_differences + filename + '.txt', 'w') as diff_file:
+		with open(path_differences + filename + '.csv', 'w') as diff_file:
 			for line in diffile.diff_files(path_datastore + filename + '.xml' , path_activities + filename + '.xml', formatter=formatter):
 				diff_file.write(line)
+
+
+		with open(path_differences + filename + '.csv', 'r') as f:
+			for line in f:
+				newf+= line.strip()+filename+';\n'
+			f.close()
+
+
+	with open('differences.csv', 'w') as f_2:	
+			f_2.write(newf)
+			f.close()
 
 
 
@@ -85,6 +99,9 @@ def deleteFolders():
 	if os.path.exists(path_datastore):
 		shutil.rmtree(path_datastore)
 
+	if os.path.exists(path_differences):
+		shutil.rmtree(path_differences)
+
 def remove_newlines(fname):
     flist = open(fname).readlines()
     return [s.rstrip('\n') for s in flist]
@@ -93,3 +110,4 @@ def remove_newlines(fname):
 if __name__ == '__main__':
 	createFolders()
 	main()
+	deleteFolders()
