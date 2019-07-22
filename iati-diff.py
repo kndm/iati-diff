@@ -70,7 +70,8 @@ def main():
 
 		with open(path_differences + filename + '.csv', 'r') as f:
 			for line in f:
-				newf+= line.strip()+filename+';\n'
+				if "move" not in line.strip():
+					newf+= line.strip()+filename+';\n'
 			f.close()
 
 
