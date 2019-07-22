@@ -35,7 +35,7 @@ def main():
 			new_data_identifier.text = current_identifier
 
 		if recording == True and elem.tag != 'iati-identifier':
-			current_child = ET.SubElement(new_data, elem.tag)
+			current_child = ET.SubElement(new_data, elem.tag, attrib = elem.attrib)
 			current_child.text = elem.text
 			logging.debug("Old data is: {}".format(ET.tostring(new_data)))
 			#new_data.append(current_child)
@@ -53,7 +53,7 @@ def main():
 
 	first = None
 
-	formatter = formatting.DiffFormatter(normalize=formatting.WS_BOTH, pretty_print=False)
+	formatter = formatting.DiffFormatter(normalize=formatting.WS_BOTH, pretty_print=True)
 
 	newf=""
 
@@ -71,13 +71,18 @@ def main():
 		with open(path_differences + filename + '.csv', 'r') as f:
 			for line in f:
 				if "move" not in line.strip():
-					newf+= line.strip()+filename+';\n'
+					line_stripped = line.strip()+ ', ' +filename+';\n'
+					line_replace_inner_bracket = line_stripped.replace('[', '')
+					line_replace_outer_bracket = line_replace_inner_bracket.replace(']', '')
+					newf += line_replace_outer_bracket
 			f.close()
 
 
 	with open('differences.csv', 'w') as f_2:	
 			f_2.write(newf)
 			f.close()
+
+
 
 
 
@@ -111,4 +116,3 @@ def remove_newlines(fname):
 if __name__ == '__main__':
 	createFolders()
 	main()
-	deleteFolders()
