@@ -1,7 +1,7 @@
 <iati-activity>
 <iati-identifier>CH-4-2008004812</iati-identifier>
-<reporting-org ref="CH-4" type="10" secondary-reporter="0">
-<narrative>Switzerland - Swiss Agency for Development and Cooperation (SDC)</narrative>
+<reporting-org ref="CH-4" type="10">
+<narrative>Swiss Agency for Development and Cooperation (SDC)</narrative>
 </reporting-org>
 <title>
 <narrative>OCHA Humanitarian Response Fund</narrative>
@@ -9,21 +9,24 @@
 <description type="1">
 <narrative>No description for this activity available at this point. Description indisponible pour cette activité.</narrative>
 </description>
-<participating-org ref="CH-4" type="10" role="1">
+<participating-org ref="CH-4" role="1" type="10">
 <narrative>Swiss Agency for Development and Cooperation (SDC)</narrative>
 </participating-org>
-<participating-org ref="XM-DAC-41114" type="40" role="4">
+<participating-org ref="XM-DAC-41114" role="4" type="40">
 <narrative>Programme des Nations Unies pour le développement</narrative>
 </participating-org>
-<other-identifier ref="7F-06559.13.01" type="A1">
-<owner-org/>
-</other-identifier>
+<other-identifier ref="7F-06559.13.01" type="A1"/>
 <activity-status code="2"/>
 <activity-date iso-date="2018-03-15" type="1"/>
+<!--planned start-->
 <activity-date iso-date="2018-03-15" type="2"/>
+<!-- Actual start-->
 <activity-date iso-date="2018-12-31" type="3"/>
+<!-- planned end-->
 <activity-date iso-date="2018-12-31" type="4"/>
+<!-- Actual end-->
 <contact-info type="1">
+<!-- general enquiries-->
 <organisation>
 <narrative>Swiss Agency for Development and Cooperation SDC</narrative>
 </organisation>
@@ -37,61 +40,52 @@
 <narrative>Freiburgstrasse 130, 3003 Berne</narrative>
 </mailing-address>
 </contact-info>
-<recipient-country code="SO"/>
-<sector code="72010" vocabulary="1" percentage="20.00"/>
-<sector code="72050" vocabulary="1" percentage="30.00"/>
-<sector code="72040" vocabulary="1" percentage="50.00"/>
-<policy-marker vocabulary="1" code="6" significance="0">
+<recipient-country code="SO">
+<narrative>Somalie</narrative>
+</recipient-country>
+<sector vocabulary="1" code="72010" percentage="20"/>
+<sector vocabulary="1" code="72050" percentage="30"/>
+<sector vocabulary="1" code="72040" percentage="50"/>
+<policy-marker code="6" significance="0">
 <narrative>Aid Targeting the Objectives of the Framework Convention on Climate Change - Mitigation</narrative>
 </policy-marker>
-<policy-marker vocabulary="1" code="8" significance="0">
+<policy-marker code="8" significance="0">
 <narrative>Aid Targeting the Objectives of the Convention to Combat Desertification</narrative>
 </policy-marker>
-<policy-marker vocabulary="1" code="7" significance="0">
+<policy-marker code="7" significance="0">
 <narrative> Aid Targeting the Objectives of the Framework Convention on Climate Change - Adaptation </narrative>
 </policy-marker>
-<policy-marker vocabulary="1" code="2" significance="0">
+<policy-marker code="2" significance="0">
 <narrative>Aid to Environment</narrative>
 </policy-marker>
-<policy-marker vocabulary="1" code="5" significance="0">
+<policy-marker code="5" significance="0">
 <narrative>Aid Targeting the Objectives of the Convention on Biological Diversity</narrative>
 </policy-marker>
-<policy-marker vocabulary="1" code="9" significance="0">
+<policy-marker code="9" significance="0">
 <narrative> Reproductive, Maternal, Newborn and Child Health (RMNCH)</narrative>
 </policy-marker>
 <collaboration-type code="1"/>
 <default-flow-type code="10"/>
 <default-finance-type code="110"/>
+<default-aid-type code="B03" vocabulary="1"/>
 <default-tied-status code="5"/>
 <transaction ref="7F-06559.13.01">
 <transaction-type code="2"/>
 <transaction-date iso-date="2018-12-15"/>
-<value currency="CHF" value-date="2018-12-15">1000000.00</value>
+<value currency="CHF" value-date="2018-12-15">1000000</value>
 <description>
 <narrative> Outgoing Commitment </narrative>
 </description>
-<sector code="72040" vocabulary="1"/>
-<sector code="72050" vocabulary="1"/>
-<sector code="72010" vocabulary="1"/>
-<recipient-country code="SO"/>
-<flow-type code="10"/>
-<finance-type code="110"/>
-<tied-status code="5"/>
+
 </transaction>
 <transaction ref="7F-06559.13.01">
 <transaction-type code="3"/>
 <transaction-date iso-date="2018-12-15"/>
-<value currency="CHF" value-date="2018-12-15">1000000.00</value>
+<value currency="CHF" value-date="2018-12-15">1000000</value>
 <description>
 <narrative> Disbursement</narrative>
 </description>
-<sector code="72040" vocabulary="1"/>
-<sector code="72050" vocabulary="1"/>
-<sector code="72010" vocabulary="1"/>
-<recipient-country code="SO"/>
-<flow-type code="10"/>
-<finance-type code="110"/>
-<tied-status code="5"/>
+
 </transaction>
 <conditions attached="0"/>
 </iati-activity>
