@@ -13,77 +13,59 @@ path_datastore = "./datastore/"
 
 
 def main():
-	recording = False
-	parser = ET.XMLParser(remove_blank_text=True)
-	tree = ET.parse(sys.argv[1], parser=parser)
-	root = tree.getroot()
-	current_identifier = ''
+	# LOAD XML AND XSL SCRIPT
+	xml = ET.parse('activity-list(2).xml')
+	xsl = ET.parse('activity_style.xsl')
+	xslt_formatting = ET.parse('htmlformatter.xslt')
+	transform = ET.XSLT(xsl)
 
-	for elem in tree.iter():
-		logging.debug("Elem tag is: {} ".format(elem.tag))
-		if elem.tag == 'iati-identifier':
+	# LOOP THROUGH ALL NODE COUNTS AND PASS PARAMETER TO XSLT
+	iati_count = len(xml.xpath('//iati-identifier'))
+	formatter = formatting.XMLFormatter(normalize=formatting.WS_BOTH, pretty_print=True)
+	for i in range(iati_count):
+	   newf=""
+	   newf2= ""
+	   n = ET.XSLT.strparam(str(i+1))            
+	   result = transform(xml, item_num=n)         # NAME OF XSL PARAMETER
 
-			recording = True
-			new_data = ET.Element('iati-activity')
-			new_data_identifier = ET.SubElement(new_data, 'iati-identifier')
+	   # SAVE XML TO FILE
+	   with open(path_activities + 'Output_{}.xml'.format(i+1), 'wb') as f:
+	   	#f.write(header.encode('utf-8'))
+	   	f.write(result)
+	   
+	   output_parser = ET.parse(path_activities + 'Output_{}.xml'.format(i+1))
+	   output_root = output_parser.getroot()
+	   output_identifier = output_root.find('iati-identifier')
+	   datastore_xml_url = 'http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=' + output_identifier.text
+	   response = requests.get(datastore_xml_url)
+	   with open(path_datastore + output_identifier.text + '.xml', 'wb') as file:
+	   	file.write(response.content)
 
-			logging.debug("Elem tag is iati-identifier")
-			if current_identifier != elem.text and current_identifier is not '':
-				logging.debug("Current identifier != elem.text and current_identifier is not empty: {} {}".format(elem.text, current_identifier))
+	   with open(path_datastore + output_identifier.text + '.xml', 'r', encoding="utf-8") as raw_datastore:
+	   	for line in raw_datastore:
+	   		newf+= line.strip() + '\n'
 
-			current_identifier = elem.text
-			new_data_identifier.text = current_identifier
+	   with open(path_activities + 'Output_{}.xml'.format(i+1), 'r', encoding="utf-8") as raw_list:
+	   	for line in raw_list:
+	   		newf2+= line.strip() + '\n'
 
-		if recording == True and elem.tag != 'iati-identifier':
-			current_child = ET.SubElement(new_data, elem.tag, attrib = elem.attrib)
-			current_child.text = elem.text
-			logging.debug("Old data is: {}".format(ET.tostring(new_data)))
-			#new_data.append(current_child)
-			logging.debug("New data is: {}".format(ET.tostring(new_data)))
-			if new_data:
-				with open(path_activities + current_identifier + '.xml', 'wb') as file:
-					file.write(ET.tostring(new_data, pretty_print=True))
+	   with open (path_datastore + 'formatted-' + output_identifier.text + '.xml', 'w', encoding="utf-8") as formatted_datastore:
+	   	formatted_datastore.write(newf)
 
-
-	fileList = os.listdir(path_activities)
-
-	elemList = [str(element).replace(".xml", "") for element in fileList]
-
-	logging.debug("Element List is: {}".format(elemList)) 
-
-	first = None
-
-	formatter = formatting.DiffFormatter(normalize=formatting.WS_BOTH, pretty_print=True)
-
-	newf=""
-
-	for filename in elemList:
-		datastore_xml_url = 'http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=' + str(filename)
-		response = requests.get(datastore_xml_url)
-		with open(path_datastore + filename + '.xml', 'wb') as file:
-			file.write(response.content)
-
-		with open(path_differences + filename + '.csv', 'w') as diff_file:
-			for line in diffile.diff_files(path_datastore + filename + '.xml' , path_activities + filename + '.xml', formatter=formatter):
-				diff_file.write(line)
+	   with open (path_activities + 'formatted-' + output_identifier.text + '.xml', 'w', encoding="utf-8") as formatted_list:
+	   	formatted_list.write(newf2)
 
 
-		with open(path_differences + filename + '.csv', 'r') as f:
-			for line in f:
-				if "move" not in line.strip():
-					line_stripped = line.strip()+ ', ' +filename+';\n'
-					line_replace_inner_bracket = line_stripped.replace('[', '')
-					line_replace_outer_bracket = line_replace_inner_bracket.replace(']', '')
-					newf += line_replace_outer_bracket
-			f.close()
+	   with open(path_differences + output_identifier.text + '.xml', 'w', encoding="utf-8") as diff_file:
+	   	result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
+	   	diff_file.write(result)
 
 
-	with open('differences.csv', 'w') as f_2:	
-			f_2.write(newf)
-			f.close()
-
-
-
+class HTMLFormatter(formatting.XMLFormatter):
+	def render(self, result):
+		transform = lxml.etree.XSLT(xslt_formatting)
+		result = transform(result)
+		return super(HTMLFormatter, self).render(result)
 
 
 def createFolders():
@@ -104,13 +86,6 @@ def deleteFolders():
 
 	if os.path.exists(path_datastore):
 		shutil.rmtree(path_datastore)
-
-	if os.path.exists(path_differences):
-		shutil.rmtree(path_differences)
-
-def remove_newlines(fname):
-    flist = open(fname).readlines()
-    return [s.rstrip('\n') for s in flist]
 
 
 if __name__ == '__main__':
