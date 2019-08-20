@@ -1,0 +1,133 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:50:48.434459" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="CHF" diff:add-attr="default-currency;last-updated-datetime;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" last-updated-datetime="2019-03-11T00:00:00Z" ns0:version="2.03" xml:lang="en">
+      <iati-identifier diff:insert="">CH-4-2018001615</iati-identifier>
+      <reporting-org diff:insert="" ref="CH-4" diff:add-attr="ref;type" type="10">
+        <narrative diff:insert="">Swiss Agency for Development and Cooperation (SDC)</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>Crédit global pour petites actions</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>Les crédits globaux pour petites actions permettent le financement d’opérations ponctuelles, peu coûteuses, significatives en termes de développement, à composantes diverses (techniques, sociales, organisationnelles et de gestion, politique, économique, informative, etc.)</narrative>
+      </description>
+      <participating-org diff:insert="" ref="CH-4" diff:add-attr="ref;role;type" role="1" type="10">
+        <narrative diff:insert="">Swiss Agency for Development and Cooperation (SDC)</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="XM-DAC-51000" diff:add-attr="ref;role;type" role="4" type="80">
+        <narrative diff:insert="">Université, institut d'education et autre institution d'enseignement, institut de recherche ou groupe de réflexion</narrative>
+      </participating-org>
+      <other-identifier diff:insert="" ref="7F-08700-51000-273-15110-C01-0000000" diff:add-attr="ref;type" type="A1"/>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date iso-date="2013-03-01" type="1" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2013-03-01" diff:add-attr="iso-date;type" type="2"/>
+      <activity-date diff:insert="" iso-date="2020-12-13" diff:add-attr="iso-date;type" type="3"/>
+      <activity-date diff:insert="" iso-date="2020-12-13" diff:add-attr="iso-date;type" type="4"/>
+      <contact-info type="1" diff:insert="">
+        <organisation>
+          <narrative>Swiss Agency for Development and Cooperation SDC</narrative>
+        </organisation>
+        <department>
+          <narrative>Statistics Unit</narrative>
+        </department>
+        <telephone>+41 58 464 92 35</telephone>
+        <email>stats.sdc@eda.admin.ch</email>
+        <website>http://www.sdc.admin.ch</website>
+        <mailing-address>
+          <narrative>Freiburgstrasse 130, 3003 Berne</narrative>
+        </mailing-address>
+      </contact-info>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code">
+        <narrative diff:insert="">Somalie</narrative>
+      </recipient-country>
+      <sector diff:insert="" code="15110" diff:add-attr="code;percentage;vocabulary" percentage="100" vocabulary="1"/>
+      <policy-marker diff:insert="" code="6" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert="">Aid Targeting the Objectives of the Framework Convention on Climate Change - Mitigation</narrative>
+      </policy-marker>
+      <policy-marker diff:insert="" code="8" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert="">Aid Targeting the Objectives of the Convention to Combat Desertification</narrative>
+      </policy-marker>
+      <policy-marker diff:insert="" code="7" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert=""> Aid Targeting the Objectives of the Framework Convention on Climate Change - Adaptation </narrative>
+      </policy-marker>
+      <policy-marker diff:insert="" code="2" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert="">Aid to Environment</narrative>
+      </policy-marker>
+      <policy-marker diff:insert="" code="5" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert="">Aid Targeting the Objectives of the Convention on Biological Diversity</narrative>
+      </policy-marker>
+      <policy-marker diff:insert="" code="9" diff:add-attr="code;significance" significance="0">
+        <narrative diff:insert=""> Reproductive, Maternal, Newborn and Child Health (RMNCH)</narrative>
+      </policy-marker>
+      <collaboration-type code="1" diff:insert=""/>
+      <default-flow-type code="10" diff:insert=""/>
+      <default-finance-type code="110" diff:insert=""/>
+      <default-aid-type diff:insert="" code="C01" diff:add-attr="code;vocabulary" vocabulary="1"/>
+      <default-tied-status code="5" diff:insert=""/>
+      <transaction diff:insert="" ref="7F-08700-51000-273-15110-C01-0000000" diff:add-attr="ref">
+        <transaction-type code="3" diff:insert=""/>
+        <transaction-date iso-date="2018-12-15" diff:insert=""/>
+        <value diff:insert="" currency="CHF" diff:add-attr="currency;value-date" value-date="2018-12-15">40000</value>
+        <description diff:insert="">
+          <narrative> Disbursement</narrative>
+        </description>
+      </transaction>
+      <conditions attached="0" diff:insert=""/>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">CH-4-2018001615</iati-identifier>
+  <reporting-org ref="CH-4" type="10" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Switzerland - Swiss Agency for Development and Cooperation (SDC)</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>Crédit global pour petites actions</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>Les crédits globaux pour petites actions permettent le financement d’opérations ponctuelles, peu coûteuses, significatives en termes de développement, à composantes diverses (techniques, sociales, organisationnelles et de gestion, politique, économique, informative, etc.)</narrative>
+  </description>
+  <participating-org ref="CH-4" type="10" role="1" diff:delete="">
+    <narrative diff:delete="">Swiss Agency for Development and Cooperation (SDC)</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2013-03-01" type="1" diff:delete=""/>
+  <contact-info type="1" diff:delete="">
+    <organisation>
+      <narrative>Swiss Agency for Development and Cooperation SDC</narrative>
+    </organisation>
+    <department>
+      <narrative>Statistics Unit</narrative>
+    </department>
+    <telephone>+41 58 464 92 35</telephone>
+    <email>stats.sdc@eda.admin.ch</email>
+    <website>http://www.sdc.admin.ch</website>
+    <mailing-address>
+      <narrative>Freiburgstrasse 130, 3003 Berne</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" diff:delete=""/>
+  <sector code="15110" vocabulary="1" percentage="100.00" diff:delete=""/>
+  <collaboration-type code="1" diff:delete=""/>
+  <default-flow-type code="10" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction ref="7F-08700-51000-273-15110-C01-0000000" diff:delete="">
+    <transaction-type code="3" diff:delete=""/>
+    <transaction-date iso-date="2018-12-15" diff:delete=""/>
+    <value currency="CHF" value-date="2018-12-15" diff:delete="">40000.00</value>
+    <description diff:delete="">
+      <narrative> Disbursement</narrative>
+    </description>
+    <sector code="15110" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+    <flow-type code="10" diff:delete=""/>
+    <finance-type code="110" diff:delete=""/>
+    <tied-status code="5" diff:delete=""/>
+  </transaction>
+  <conditions attached="0" diff:delete=""/>
+</result>

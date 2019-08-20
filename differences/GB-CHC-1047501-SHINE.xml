@@ -1,0 +1,149 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:50:58.767486" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="GBP" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="1" last-updated-datetime="2019-08-01T15:47:08+00:00" linked-data-uri="" ns0:version="2.03" xml:lang="en">
+      <iati-identifier diff:insert="">GB-CHC-1047501-SHINE</iati-identifier>
+      <reporting-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>Somali Health and Nutrition Programme</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>The project will support the Somali Health Authorities in 10 targeted districts (Abdiazir, Bondhere, Hamarweyne, Hodan, Shangani, Shibis, Waberi, Wadajir, Wardhigley, Yaqshid) in Banadir to: 1. Increase access to, utilisation and quality of health and nutrition services at community, primary and secondary health levels, especially for women, children and vulnerable populations and; 2. Strengthen the health system under the stewardship of the Somali Health Authorities (SHAs). The project’s approach focuses on strengthening the SHAs’ capacity at the regional, district and community levels to deliver the EPHS (core services 1-6). Lessons from Joint Health Nutrition Programme (JHNP) and other programmes, identified a critical management gap at the district level in Banadir. A core focus of the project’s methodology is therefore to support the Regional health Officer (RHO) in Banadir to establish and develop a District Health Management Team (DHMT) in each of the 10-targeted districts. Having an operational management body at district level, within the SHA structure, will be an essential component of ensuring that the health facilities and community/female health workers (CHWs/FHWs), in their respective districts, are able to receive the technical, management and logistical support required for them to successfully deliver integrated, quality, health and nutrition services that the population can access. This is a structure and model that has been demonstrated to be successful in other health systems (e.g. in Kenya). The consortium will work closely with the RHO throughout the project to establish, develop and support the DHMTs.</narrative>
+      </description>
+      <participating-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;role;type" role="1" type="10">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">UK - Department for International Development (DFID)</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-COH-1110949" diff:add-attr="ref;role;type" role="3" type="70">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Mott MacDonald Limited</narrative>
+      </participating-org>
+      <participating-org diff:insert="" activity-id="GB-CHC-1047501-SHINE" diff:add-attr="activity-id;ref;role;type" ref="GB-CHC-1047501" role="2" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger UK</narrative>
+      </participating-org>
+      <participating-org diff:insert="" role="4" diff:add-attr="role;type" type="21">
+        <narrative diff:insert="">Action Against Hunger USA</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-CHC-1092236" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Concern Worldwide UK</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-CHC-1093861" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">International Medical Corps UK</narrative>
+      </participating-org>
+      <participating-org diff:insert="" role="4" diff:add-attr="role;type" type="22">
+        <narrative diff:insert="">Aamin Ambulance</narrative>
+      </participating-org>
+      <participating-org diff:insert="" role="4" diff:add-attr="role;type" type="22">
+        <narrative diff:insert="">Wardi Relief</narrative>
+      </participating-org>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date iso-date="2019-01-01" type="2" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2020-12-31" diff:add-attr="iso-date;type" type="3"/>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="100"/>
+      <sector diff:insert="" code="12220" diff:add-attr="code;percentage;vocabulary" percentage="30" vocabulary="1"/>
+      <sector diff:insert="" code="12240" diff:add-attr="code;percentage;vocabulary" percentage="30" vocabulary="1"/>
+      <sector diff:insert="" code="12230" diff:add-attr="code;percentage;vocabulary" percentage="40" vocabulary="1"/>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2019-01-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2019-12-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2019-01-01">2682626</value>
+      </budget>
+      <budget diff:insert="" status="1" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2020-01-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2020-12-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2019-01-01">2637374</value>
+      </budget>
+      <transaction diff:insert="" ref="SHINE-1&amp;2 In" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2019-07-17" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2019-07-17" diff:add-attr="value-date">370599.41</value>
+        <provider-org diff:insert="" provider-activity-id="GB-COH-1110949-GB-COH-1110949-376106" diff:add-attr="provider-activity-id;ref" ref="GB-COH-1110949"/>
+        <receiver-org diff:insert="" receiver-activity-id="GB-CHC-1047501-SHINE" diff:add-attr="receiver-activity-id;ref;type" ref="GB-CHC-1047501" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="SHINE-3 In" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2019-07-22" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2019-07-22" diff:add-attr="value-date">134528.19</value>
+        <provider-org diff:insert="" provider-activity-id="GB-COH-1110949-GB-COH-1110949-376106" diff:add-attr="provider-activity-id;ref" ref="GB-COH-1110949"/>
+        <receiver-org diff:insert="" receiver-activity-id="GB-CHC-1047501-SHINE" diff:add-attr="receiver-activity-id;ref;type" ref="GB-CHC-1047501" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="SHINE-1&amp;2 Out" diff:add-attr="ref">
+        <transaction-type code="3" diff:insert="" diff:rename="collaboration-type"/>
+        <transaction-date diff:insert="" iso-date="2019-07-29" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2019-07-29" diff:add-attr="value-date">370599.41</value>
+        <provider-org diff:insert="" provider-activity-id="GB-CHC-1047501-SHINE" diff:add-attr="provider-activity-id;ref;type" ref="GB-CHC-1047501" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="US-EIN-13-3327220" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">GB-CHC-1047501-SHINE</iati-identifier>
+  <reporting-org ref="GB-CHC-1047501" type="21" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Action Against Hunger</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>Somali Health and Nutrition Programme</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>The project will support the Somali Health Authorities in 10 targeted districts (Abdiazir, Bondhere, Hamarweyne, Hodan, Shangani, Shibis, Waberi, Wadajir, Wardhigley, Yaqshid) in Banadir to: 1. Increase access to, utilisation and quality of health and nutrition services at community, primary and secondary health levels, especially for women, children and vulnerable populations and; 2. Strengthen the health system under the stewardship of the Somali Health Authorities (SHAs). The project’s approach focuses on strengthening the SHAs’ capacity at the regional, district and community levels to deliver the EPHS (core services 1-6). Lessons from Joint Health Nutrition Programme (JHNP) and other programmes, identified a critical management gap at the district level in Banadir. A core focus of the project’s methodology is therefore to support the Regional health Officer (RHO) in Banadir to establish and develop a District Health Management Team (DHMT) in each of the 10-targeted districts. Having an operational management body at district level, within the SHA structure, will be an essential component of ensuring that the health facilities and community/female health workers (CHWs/FHWs), in their respective districts, are able to receive the technical, management and logistical support required for them to successfully deliver integrated, quality, health and nutrition services that the population can access. This is a structure and model that has been demonstrated to be successful in other health systems (e.g. in Kenya). The consortium will work closely with the RHO throughout the project to establish, develop and support the DHMTs.</narrative>
+  </description>
+  <participating-org ref="GB-GOV-1" type="10" role="1" diff:delete="">
+    <narrative diff:delete="">UK - Department for International Development (DFID)</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2019-01-01" type="2" diff:delete=""/>
+  <contact-info type="2" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">ActionAid UK - Programme Quality and Assurance Team</narrative>
+    </organisation>
+    <department diff:delete="">
+      <narrative diff:delete="">Humanitarian Policy and Practice</narrative>
+    </department>
+    <telephone diff:delete="">+44 (0)20 3122 0561</telephone>
+    <email diff:delete="">Transparency.UK@actionaid.org</email>
+    <website diff:delete="">https://www.actionaid.org.uk/</website>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">33-39 Bowling Green Lane London EC1R 0BJ</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" percentage="100.00" diff:delete=""/>
+  <sector code="12220" vocabulary="1" percentage="30.00" diff:delete=""/>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="30" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction diff:delete="">
+    <transaction-type code="3" diff:delete=""/>
+    <transaction-date iso-date="2019-01-03" diff:delete=""/>
+    <value currency="GBP" value-date="2019-01-03" diff:delete="">166500.00</value>
+    <description diff:delete="">
+      <narrative diff:delete="">Payment 1 disbursement BRCiS SHARP</narrative>
+    </description>
+    <provider-org ref="GB-CHC-1047501" type="21" diff:delete="">
+      <narrative diff:delete="">Action Against Hunger UK</narrative>
+    </provider-org>
+    <receiver-org type="21" diff:delete="">
+      <narrative diff:delete="">Action Contre la Faim</narrative>
+    </receiver-org>
+    <sector code="12240" vocabulary="1" diff:delete=""/>
+    <sector code="14030" vocabulary="1" diff:delete=""/>
+    <sector code="12220" vocabulary="1" diff:delete=""/>
+    <sector code="31110" vocabulary="1" diff:delete=""/>
+    <sector code="74010" vocabulary="1" diff:delete=""/>
+    <sector code="99810" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+  </transaction>
+  <conditions attached="0" diff:delete=""/>
+</result>

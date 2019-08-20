@@ -1,0 +1,323 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:50:53.337231" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="GBP" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="0" last-updated-datetime="2018-02-08T13:09:23+00:00" linked-data-uri="" ns0:version="2.02" xml:lang="en">
+      <iati-identifier diff:insert="">GB-CHC-1047501-GB-CHC-1047501-REFANI</iati-identifier>
+      <reporting-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>Research on Food Assistance for Nutritional Impact (REFANI)</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>Aims to ensure more effective humanitarian interventions by strengthening the evidence base on the impact of cash and voucher-based food assistance to prevent undernutrition in emergencies. Primary outcomes expected are:(1) the creation of high-quality, relevant research that fills gaps in the evidence base;(2) the accessibility of results and evidence to both technical and non-technical audiences;and (3) the successful uptake of REFANI research by key stakeholders in policy and practice.</narrative>
+      </description>
+      <participating-org ref="GB-GOV-1" type="10" role="1" diff:insert="">
+        <narrative>DFID</narrative>
+      </participating-org>
+      <activity-status code="4" diff:insert=""/>
+      <activity-date iso-date="2014-03-01" type="2" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2017-11-30" diff:add-attr="iso-date;type" type="3"/>
+      <recipient-country diff:insert="" code="PK" diff:add-attr="code;percentage" percentage="33.4"/>
+      <recipient-country diff:insert="" code="NE" diff:add-attr="code;percentage" percentage="33.3"/>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="33.3"/>
+      <sector code="52010" vocabulary="1" diff:insert=""/>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2014-03-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2015-02-28" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2014-03-01" diff:add-attr="value-date">668495</value>
+      </budget>
+      <budget diff:insert="" status="2" diff:add-attr="status">
+        <period-start diff:insert="" iso-date="2015-03-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2016-02-28" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2014-03-01" diff:add-attr="value-date">1151424</value>
+      </budget>
+      <budget diff:insert="" status="2" diff:add-attr="status">
+        <period-start diff:insert="" iso-date="2016-03-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2017-02-28" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2014-03-01" diff:add-attr="value-date">1197574</value>
+      </budget>
+      <budget diff:insert="" status="2" diff:add-attr="status">
+        <period-start diff:insert="" iso-date="2017-03-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2017-11-30" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2014-03-01" diff:add-attr="value-date">165659</value>
+      </budget>
+      <transaction diff:insert="" ref="Refani-Reciept-1" diff:add-attr="ref">
+        <transaction-type code="1" diff:insert=""/>
+        <transaction-date iso-date="2015-01-07" diff:insert=""/>
+        <value diff:insert="" value-date="2015-01-07" diff:add-attr="value-date">244465.00</value>
+        <provider-org ref="GB-GOV-1" type="10" diff:insert="">
+          <narrative>DFID</narrative>
+        </provider-org>
+        <receiver-org ref="GB-CHC-1047501" type="21" diff:insert="">
+          <narrative>Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-2" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2015-04-17" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2015-04-17" diff:add-attr="value-date">365042.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047502" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-3" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2015-07-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2015-07-31" diff:add-attr="value-date">418429.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047503" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-4" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-01-08" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-01-08" diff:add-attr="value-date">301889.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047504" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-5" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-06-01" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-06-01" diff:add-attr="value-date">299848.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047505" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-6" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-08-05" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-08-05" diff:add-attr="value-date">250341.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047506" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-7" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-10-24" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-10-24" diff:add-attr="value-date">260683.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047507" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-8" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-01-25" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-01-25" diff:add-attr="value-date">288624.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047508" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-9" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-04-03" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-04-03" diff:add-attr="value-date">123402.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047509" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="Refani-Reciept-10" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-06-28" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-06-28" diff:add-attr="value-date">160679.00</value>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047510" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-1" diff:add-attr="ref">
+        <transaction-type code="3" diff:insert="" diff:rename="collaboration-type"/>
+        <transaction-date diff:insert="" iso-date="2015-02-05" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2015-02-05" diff:add-attr="value-date">244465.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-2" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2015-04-17" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2015-04-17" diff:add-attr="value-date">365042.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047502" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-3" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2015-08-13" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2015-08-13" diff:add-attr="value-date">418429.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047503" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-4" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-02-24" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-02-24" diff:add-attr="value-date">301889.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047504" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-5" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-04-04" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-04-04" diff:add-attr="value-date">299848.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047505" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-6" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-08-05" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-08-05" diff:add-attr="value-date">250341.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047506" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-7" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2016-10-24" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2016-10-24" diff:add-attr="value-date">260683.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047507" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-8" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-02-20" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-02-20" diff:add-attr="value-date">288624.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047508" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-9" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-04-06" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-04-06" diff:add-attr="value-date">123402.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047509" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="REFANI-Payment-10" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-07-03" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-07-03" diff:add-attr="value-date">160679.00</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047510" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">GB-CHC-1047501-GB-CHC-1047501-REFANI</iati-identifier>
+  <reporting-org ref="GB-CHC-1047501" type="21" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Action Against Hunger</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>Research on Food Assistance for Nutritional Impact (REFANI)</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>Aims to ensure more effective humanitarian interventions by strengthening the evidence base on the impact of cash and voucher-based food assistance to prevent undernutrition in emergencies. Primary outcomes expected are:(1) the creation of high-quality, relevant research that fills gaps in the evidence base;(2) the accessibility of results and evidence to both technical and non-technical audiences;and (3) the successful uptake of REFANI research by key stakeholders in policy and practice.</narrative>
+  </description>
+  <participating-org ref="GB-GOV-1" type="10" role="1" diff:delete="">
+    <narrative>DFID</narrative>
+  </participating-org>
+  <activity-status code="4" diff:delete=""/>
+  <activity-date iso-date="2014-03-01" type="2" diff:delete=""/>
+  <contact-info type="2" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">ActionAid UK - Programme Quality and Assurance Team</narrative>
+    </organisation>
+    <department diff:delete="">
+      <narrative diff:delete="">Humanitarian Policy and Practice</narrative>
+    </department>
+    <telephone diff:delete="">+44 (0)20 3122 0561</telephone>
+    <email diff:delete="">Transparency.UK@actionaid.org</email>
+    <website diff:delete="">https://www.actionaid.org.uk/</website>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">33-39 Bowling Green Lane London EC1R 0BJ</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="PK" percentage="33.40" diff:delete=""/>
+  <sector code="52010" vocabulary="1" diff:delete=""/>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="30" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction ref="Refani-Reciept-1" diff:delete="">
+    <transaction-type code="1" diff:delete=""/>
+    <transaction-date iso-date="2015-01-07" diff:delete=""/>
+    <value currency="GBP" value-date="2015-01-07" diff:delete="">244465.00</value>
+    <provider-org ref="GB-GOV-1" type="10" diff:delete="">
+      <narrative>DFID</narrative>
+    </provider-org>
+    <receiver-org ref="GB-CHC-1047501" type="21" diff:delete="">
+      <narrative>Action Against Hunger UK</narrative>
+    </receiver-org>
+    <sector code="52010" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+    <recipient-country code="NE" diff:delete=""/>
+    <recipient-country code="PK" diff:delete=""/>
+  </transaction>
+  <conditions attached="0" diff:delete=""/>
+</result>

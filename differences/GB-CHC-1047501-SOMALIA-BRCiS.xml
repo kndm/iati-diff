@@ -1,0 +1,153 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:51:02.978726" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="GBP" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="1" last-updated-datetime="2018-03-09T10:13:21+00:00" linked-data-uri="" ns0:version="2.03" xml:lang="en">
+      <iati-identifier diff:insert="">GB-CHC-1047501-SOMALIA-BRCiS</iati-identifier>
+      <reporting-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>Building Resilient Communities in Somalia (BRCiS) Scale-Up (IRF#5)</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>The BRCiS partners through the Technical Working Group have gone through an elaborate needs-based exercise to come up with potential caseloads to target with the upcoming emergency scale-up of IRF funding provided by DFID </narrative>
+      </description>
+      <participating-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="">Action Against Hunger</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;role;type" role="1" type="10">
+        <narrative diff:insert="">DFID</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="NO-BRC-977538319" diff:add-attr="ref;role;type" role="2" type="21">
+        <narrative diff:insert="">Norwegian Refugee Council</narrative>
+      </participating-org>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date iso-date="2017-08-01" type="2" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2018-03-31" diff:add-attr="iso-date;type" type="3"/>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="100"/>
+      <recipient-region diff:insert="" code="298" diff:add-attr="code"/>
+      <sector diff:insert="" code="12240" diff:add-attr="code;percentage;vocabulary" percentage="100" vocabulary="1"/>
+      <budget diff:insert="" status="2" diff:add-attr="status">
+        <period-start diff:insert="" iso-date="2017-08-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2017-12-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2017-08-01">2965303.06</value>
+      </budget>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="2">
+        <period-start diff:insert="" iso-date="2017-08-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2018-03-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-08-01" diff:add-attr="value-date">3766522.07</value>
+      </budget>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="2">
+        <period-start diff:insert="" iso-date="2017-08-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2018-03-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2018-02-08" diff:add-attr="value-date">4057882.52</value>
+      </budget>
+      <transaction diff:insert="" ref="SOMALIA-IRF5-Tranche-1-In " diff:add-attr="ref">
+        <transaction-type code="1" diff:insert=""/>
+        <transaction-date iso-date="2017-09-13" diff:insert=""/>
+        <value diff:insert="" value-date="2017-09-13" diff:add-attr="value-date">916610</value>
+        <provider-org diff:insert="" ref="NO-BRC-977538319" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Norwegian Refugee Council</narrative>
+        </provider-org>
+        <receiver-org ref="GB-CHC-1047501" type="21" diff:insert="">
+          <narrative>Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="SOMALIA-IRF5-Tranche-1-Out" diff:add-attr="ref">
+        <transaction-type code="3" diff:insert="" diff:rename="collaboration-type"/>
+        <transaction-date diff:insert="" iso-date="2017-10-12" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-10-12" diff:add-attr="value-date">916610</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="SOMALIA-IRF5-Tranche-2-IN" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-11-15" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-11-15" diff:add-attr="value-date">2148692.73</value>
+        <provider-org diff:insert="" ref="NO-BRC-977538319" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Norwegian Refugee Council</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="" ref="SOMALIA-IRF5-Tranche-2-OUT" diff:add-attr="ref">
+        <transaction-type diff:insert="" code="3" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2017-11-15" diff:add-attr="iso-date"/>
+        <value diff:insert="" value-date="2017-11-15" diff:add-attr="value-date">2148692.73</value>
+        <provider-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org diff:insert="" type="21" diff:add-attr="type">
+          <narrative diff:insert="">Action Against Hunger USA</narrative>
+        </receiver-org>
+      </transaction>
+      <document-link diff:insert="" format="application/msword" diff:add-attr="format;url" url="https://aidstream.org/files/documents/Annex-1---20170724-proposal-drought-scale-up-DFID-IRF5_FINAL-20170904030913.docx">
+        <title diff:insert="">
+          <narrative diff:insert="">Somalia BRCiS IRF#5 Proposal</narrative>
+        </title>
+        <category diff:insert="" code="A02" diff:add-attr="code"/>
+        <document-date diff:insert="" iso-date="2017-07-24" diff:add-attr="iso-date"/>
+      </document-link>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">GB-CHC-1047501-SOMALIA-BRCiS</iati-identifier>
+  <reporting-org ref="GB-CHC-1047501" type="21" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Action Against Hunger</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>Building Resilient Communities in Somalia (BRCiS) Scale-Up (IRF#5)</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>The BRCiS partners through the Technical Working Group have gone through an elaborate needs-based exercise to come up with potential caseloads to target with the upcoming emergency scale-up of IRF funding provided by DFID </narrative>
+  </description>
+  <participating-org ref="GB-CHC-1047501" type="21" role="4" diff:delete="">
+    <narrative diff:delete="">Action Against Hunger</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2017-08-01" type="2" diff:delete=""/>
+  <contact-info type="2" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">ActionAid UK - Programme Quality and Assurance Team</narrative>
+    </organisation>
+    <department diff:delete="">
+      <narrative diff:delete="">Humanitarian Policy and Practice</narrative>
+    </department>
+    <telephone diff:delete="">+44 (0)20 3122 0561</telephone>
+    <email diff:delete="">Transparency.UK@actionaid.org</email>
+    <website diff:delete="">https://www.actionaid.org.uk/</website>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">33-39 Bowling Green Lane London EC1R 0BJ</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" percentage="100.00" diff:delete=""/>
+  <sector code="12240" vocabulary="1" percentage="100.00" diff:delete=""/>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="30" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction ref="SOMALIA-IRF5-Tranche-1-In " diff:delete="">
+    <transaction-type code="1" diff:delete=""/>
+    <transaction-date iso-date="2017-09-13" diff:delete=""/>
+    <value currency="GBP" value-date="2017-09-13" diff:delete="">916610.00</value>
+    <provider-org ref="NO-BRC-977538319" type="21" diff:delete="">
+      <narrative diff:delete="">Norwegian Refugee Council</narrative>
+    </provider-org>
+    <receiver-org ref="GB-CHC-1047501" type="21" diff:delete="">
+      <narrative>Action Against Hunger UK</narrative>
+    </receiver-org>
+    <sector code="12240" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+    <recipient-region code="298" vocabulary="1" diff:delete=""/>
+  </transaction>
+  <conditions attached="0" diff:delete=""/>
+</result>

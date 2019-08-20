@@ -1,0 +1,162 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:51:00.253763" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="GBP" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="1" last-updated-datetime="2019-03-21T16:00:46+00:00" linked-data-uri="" ns0:version="2.03" xml:lang="en">
+      <iati-identifier diff:insert="">GB-CHC-1047501-SHARPBRCiS</iati-identifier>
+      <reporting-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>Building Resilient Communities in Somalia: A nutrition sensitive Resilience building programme (SHARP)</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>To support and accompany vulnerable Somali communities and systems on their path to restoring and strengthening their resilience to shocks and stresses within the framework of the development goals stated in National Development Plan and UK Humanitarian Reform Policy. BRCiS is designed in such a way that adaptive programming contributes to enhanced learning and coordination for all stakeholders, providing building blocks for long-term resilient development. Outputs Actively contribute to shaping collective approaches to achieving sustainable outcomes in resilience in Somalia, through mainstreaming adaptive management and scalable innovations Protect vulnerable populations from the impact of shocks and stresses through safety nets and actual early action Promote market integrated, shock-proof livelihood opportunities Set the ground for community managed risk reduction through Natural Resource Management, improved governance and early warning systems Enhance access to and utilization of basic services for key vulnerable populations</narrative>
+      </description>
+      <participating-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;role;type" role="1" type="10">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">UK - Department for International Development (DFID)</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Action Against Hunger UK</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-CHC-1065972" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">International Rescue Committee UK</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="NO-BRC-977538319" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Norwegian Refugee Council</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="GB-CHC-1076822" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Save the Children International</narrative>
+      </participating-org>
+      <participating-org diff:insert="" role="4" diff:add-attr="role;type" type="21">
+        <narrative diff:insert="">Cesvi</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="IE-CHY-20009090" diff:add-attr="ref;role;type" role="4" type="21">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Concern Worldwide</narrative>
+      </participating-org>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date iso-date="2018-09-01" type="2" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2022-03-31" diff:add-attr="iso-date;type" type="3"/>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="100"/>
+      <sector diff:insert="" code="99810" diff:add-attr="code;percentage;vocabulary" percentage="20" vocabulary="1">
+        <narrative diff:insert="">Community engagement local governance strengthening</narrative>
+      </sector>
+      <sector diff:insert="" code="74010" diff:add-attr="code;percentage;vocabulary" percentage="25" vocabulary="1"/>
+      <sector diff:insert="" code="31110" diff:add-attr="code;percentage;vocabulary" percentage="20" vocabulary="1"/>
+      <sector diff:insert="" code="12220" diff:add-attr="code;percentage;vocabulary" percentage="5" vocabulary="1"/>
+      <sector diff:insert="" code="14030" diff:add-attr="code;percentage;vocabulary" percentage="5" vocabulary="1"/>
+      <sector diff:insert="" code="12240" diff:add-attr="code;percentage;vocabulary" percentage="25" vocabulary="1"/>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2018-09-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2019-08-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2018-09-01">2176413</value>
+      </budget>
+      <budget diff:insert="" status="1" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2019-09-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2020-08-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2018-09-01">2249287</value>
+      </budget>
+      <budget diff:insert="" status="1" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2020-09-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2021-08-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2018-09-01">2132886</value>
+      </budget>
+      <budget diff:insert="" status="1" diff:add-attr="status;type" type="1">
+        <period-start diff:insert="" iso-date="2021-09-01" diff:add-attr="iso-date"/>
+        <period-end diff:insert="" iso-date="2022-03-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2018-09-01">2150867</value>
+      </budget>
+      <transaction diff:insert="">
+        <transaction-type diff:insert="" code="1" diff:add-attr="code"/>
+        <transaction-date diff:insert="" iso-date="2018-12-27" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2018-12-27">166500</value>
+        <description diff:insert="">
+          <narrative diff:insert="">Payment 1 BRCiS SHARP</narrative>
+        </description>
+        <provider-org diff:insert="" ref="GB-GOV-1" diff:add-attr="ref;type" type="10">
+          <narrative diff:insert="">DFID</narrative>
+        </provider-org>
+        <receiver-org ref="GB-CHC-1047501" type="21" diff:insert="" diff:rename="provider-org">
+          <narrative>Action Against Hunger UK</narrative>
+        </receiver-org>
+      </transaction>
+      <transaction diff:insert="">
+        <transaction-type code="3" diff:insert="" diff:rename="collaboration-type"/>
+        <transaction-date iso-date="2019-01-03" diff:insert=""/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2019-01-03">166500</value>
+        <description diff:insert="">
+          <narrative>Payment 1 disbursement BRCiS SHARP</narrative>
+        </description>
+        <provider-org diff:insert="" ref="GB-CHC-1047501" diff:add-attr="ref;type" type="21">
+          <narrative diff:insert="">Action Against Hunger UK</narrative>
+        </provider-org>
+        <receiver-org type="21" diff:insert="">
+          <narrative>Action Contre la Faim</narrative>
+        </receiver-org>
+      </transaction>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">GB-CHC-1047501-SHARPBRCiS</iati-identifier>
+  <reporting-org ref="GB-CHC-1047501" type="21" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Action Against Hunger</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>Building Resilient Communities in Somalia: A nutrition sensitive Resilience building programme (SHARP)</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>To support and accompany vulnerable Somali communities and systems on their path to restoring and strengthening their resilience to shocks and stresses within the framework of the development goals stated in National Development Plan and UK Humanitarian Reform Policy. BRCiS is designed in such a way that adaptive programming contributes to enhanced learning and coordination for all stakeholders, providing building blocks for long-term resilient development. Outputs Actively contribute to shaping collective approaches to achieving sustainable outcomes in resilience in Somalia, through mainstreaming adaptive management and scalable innovations Protect vulnerable populations from the impact of shocks and stresses through safety nets and actual early action Promote market integrated, shock-proof livelihood opportunities Set the ground for community managed risk reduction through Natural Resource Management, improved governance and early warning systems Enhance access to and utilization of basic services for key vulnerable populations</narrative>
+  </description>
+  <participating-org ref="GB-GOV-1" type="10" role="1" diff:delete="">
+    <narrative diff:delete="">UK - Department for International Development (DFID)</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2018-09-01" type="2" diff:delete=""/>
+  <contact-info type="2" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">ActionAid UK - Programme Quality and Assurance Team</narrative>
+    </organisation>
+    <department diff:delete="">
+      <narrative diff:delete="">Humanitarian Policy and Practice</narrative>
+    </department>
+    <telephone diff:delete="">+44 (0)20 3122 0561</telephone>
+    <email diff:delete="">Transparency.UK@actionaid.org</email>
+    <website diff:delete="">https://www.actionaid.org.uk/</website>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">33-39 Bowling Green Lane London EC1R 0BJ</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" percentage="100.00" diff:delete=""/>
+  <sector code="99810" vocabulary="1" percentage="20.00" diff:delete="">
+    <narrative diff:delete="">Community engagement local governance strengthening</narrative>
+  </sector>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="30" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction diff:delete="">
+    <transaction-type code="3" diff:delete=""/>
+    <transaction-date iso-date="2019-01-03" diff:delete=""/>
+    <value currency="GBP" value-date="2019-01-03" diff:delete="">166500.00</value>
+    <description diff:delete="">
+      <narrative>Payment 1 disbursement BRCiS SHARP</narrative>
+    </description>
+    <provider-org ref="GB-CHC-1047501" type="21" diff:delete="">
+      <narrative>Action Against Hunger UK</narrative>
+    </provider-org>
+    <receiver-org type="21" diff:delete="">
+      <narrative>Action Contre la Faim</narrative>
+    </receiver-org>
+    <sector code="12240" vocabulary="1" diff:delete=""/>
+    <sector code="14030" vocabulary="1" diff:delete=""/>
+    <sector code="12220" vocabulary="1" diff:delete=""/>
+    <sector code="31110" vocabulary="1" diff:delete=""/>
+    <sector code="74010" vocabulary="1" diff:delete=""/>
+    <sector code="99810" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+  </transaction>
+  <conditions attached="0" diff:delete=""/>
+</result>

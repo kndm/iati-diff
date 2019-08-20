@@ -1,0 +1,99 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:51:20.299838" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="EUR" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="false" last-updated-datetime="2018-09-26T08:11:30+00:00" linked-data-uri="" ns0:version="2.02" xml:lang="en">
+      <iati-identifier diff:insert="">NL-KVK-33226495-90335576Somalia1</iati-identifier>
+      <reporting-org diff:insert="" ref="NL-KVK-33226495" diff:add-attr="ref;type" type="70">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Atradius Dutch State Business</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative>DGGF Track 3</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>Export credit insurance of the supply of a small fish processing facility, including cooling equipment and diesel generators. In addition, management support will be provided with a focus on food safety.</narrative>
+      </description>
+      <participating-org diff:insert="" ref="NL-KVK-33226495" diff:add-attr="ref;role;type" role="1" type="70">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Atradius Dutch State Business</narrative>
+      </participating-org>
+      <participating-org diff:insert="" ref="NL-KVK-33226495" diff:add-attr="ref;role;type" role="2" type="70">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">Atradius Dutch State Business</narrative>
+      </participating-org>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date diff:insert="" iso-date="2017-12-11" diff:add-attr="iso-date;type" type="2">
+        <narrative diff:insert="">issued date of policy</narrative>
+      </activity-date>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="100"/>
+      <sector diff:insert="" code="99820" diff:add-attr="code;percentage;vocabulary" percentage="100" vocabulary="1"/>
+      <sector diff:insert="" code="5165" diff:add-attr="code;percentage;vocabulary;vocabulary-uri" percentage="100" vocabulary="99" vocabulary-uri="http://ec.europa.eu/eurostat/ramon/index.cfm?TargetUrl=DSP_PUB_WELC">
+        <narrative diff:insert="">Wholesale other non-agri machinery</narrative>
+      </sector>
+      <policy-marker diff:insert="" code="4" diff:add-attr="code;significance;vocabulary" significance="2" vocabulary="1"/>
+      <default-flow-type code="35" diff:insert=""/>
+      <default-finance-type diff:insert="" code="451" diff:add-attr="code"/>
+      <default-aid-type diff:insert="" code="H01" diff:add-attr="code"/>
+      <default-tied-status code="4" diff:insert=""/>
+      <transaction diff:insert="" humanitarian="0" diff:add-attr="humanitarian;ref" ref="DGGF20170710 supply of a fish processing plant">
+        <transaction-type code="10" diff:insert=""/>
+        <transaction-date iso-date="2017-12-11" diff:insert=""/>
+        <value diff:insert="" currency="EUR" diff:add-attr="currency;value-date" value-date="2017-12-11">667927</value>
+        <description diff:insert="">
+          <narrative>maximum liability of the insurance contract</narrative>
+        </description>
+        <receiver-org ref="Aminia Fishing LLC" type="70" diff:insert=""/>
+        <flow-type code="35" diff:insert=""/>
+        <finance-type diff:insert="" code="451" diff:add-attr="code"/>
+        <aid-type diff:insert="" code="H01" diff:add-attr="code"/>
+        <tied-status code="4" diff:insert=""/>
+      </transaction>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">NL-KVK-33226495-90335576Somalia1</iati-identifier>
+  <reporting-org ref="NL-KVK-33226495" type="70" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">Atradius Dutch State Business</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative>DGGF Track 3</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>Export credit insurance of the supply of a small fish processing facility, including cooling equipment and diesel generators. In addition, management support will be provided with a focus on food safety.</narrative>
+  </description>
+  <participating-org ref="NL-KVK-33226495" type="70" role="1" diff:delete="">
+    <narrative diff:delete="">Atradius Dutch State Business</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2017-12-11" type="2" diff:delete=""/>
+  <contact-info type="1" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">AICS - Italian Agency for Cooperation and Development</narrative>
+    </organisation>
+    <telephone diff:delete="">+ 39 06 32492 305</telephone>
+    <email diff:delete="">info@aics.gov.it</email>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">via Salvatore Contarini 25, 00135 Roma</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" percentage="100.00" diff:delete=""/>
+  <sector code="99820" vocabulary="1" percentage="100.00" diff:delete=""/>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="35" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="4" diff:delete=""/>
+  <transaction ref="DGGF20170710 supply of a fish processing plant" humanitarian="0" diff:delete="">
+    <transaction-type code="10" diff:delete=""/>
+    <transaction-date iso-date="2017-12-11" diff:delete=""/>
+    <value currency="EUR" value-date="2017-12-11" diff:delete="">667927.00</value>
+    <description diff:delete="">
+      <narrative>maximum liability of the insurance contract</narrative>
+    </description>
+    <receiver-org ref="Aminia Fishing LLC" type="70" diff:delete=""/>
+    <sector code="99820" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+    <flow-type code="35" diff:delete=""/>
+    <tied-status code="4" diff:delete=""/>
+  </transaction>
+</result>

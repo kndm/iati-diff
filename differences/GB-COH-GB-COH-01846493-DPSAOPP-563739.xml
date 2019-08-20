@@ -1,0 +1,77 @@
+<result xmlns:diff="http://namespaces.shoobx.com/diff" diff:rename="iati-activity">
+  <ok diff:insert="">True</ok>
+  <iati-activities diff:insert="" generated-datetime="2019-08-20T17:51:21.428520" diff:add-attr="generated-datetime">
+    <query diff:insert="">
+      <total-count diff:insert="">1</total-count>
+      <start diff:insert="">0</start>
+      <limit diff:insert="">50</limit>
+    </query>
+    <iati-activity xmlns:ns0="http://datastore.iatistandard.org/ns" diff:insert="" default-currency="GBP" diff:add-attr="default-currency;hierarchy;humanitarian;last-updated-datetime;linked-data-uri;{http://datastore.iatistandard.org/ns}version;{http://www.w3.org/XML/1998/namespace}lang" hierarchy="1" humanitarian="1" last-updated-datetime="2018-08-03T10:11:45+00:00" linked-data-uri="" ns0:version="2.03" xml:lang="en">
+      <iati-identifier diff:insert="">GB-COH-GB-COH-01846493-DPSAOPP-563739</iati-identifier>
+      <reporting-org diff:insert="" ref="GB-COH-GB-COH-01846493" diff:add-attr="ref;type" type="70">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">AECOM Limited</narrative>
+      </reporting-org>
+      <title diff:insert="">
+        <narrative diff:insert="" xml:lang="en" diff:add-attr="{http://www.w3.org/XML/1998/namespace}lang">OPP-563739</narrative>
+      </title>
+      <description type="1" diff:insert="">
+        <narrative>SDF Procurement of Pharmaceuticals</narrative>
+      </description>
+      <participating-org ref="1 GB-1 10" type="10" role="1" diff:insert="">
+        <narrative>DFID</narrative>
+      </participating-org>
+      <activity-status code="2" diff:insert=""/>
+      <activity-date iso-date="2017-12-11" type="2" diff:insert=""/>
+      <recipient-country diff:insert="" code="SO" diff:add-attr="code;percentage" percentage="100"/>
+      <sector diff:insert="" code="32168" diff:add-attr="code;percentage;vocabulary" percentage="100" vocabulary="1"/>
+      <budget diff:insert="" status="2" diff:add-attr="status;type" type="1">
+        <period-start iso-date="2017-12-11" diff:insert="" diff:rename="transaction-date"/>
+        <period-end diff:insert="" iso-date="2018-03-31" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2017-12-11">209552</value>
+      </budget>
+      <transaction diff:insert="" ref="OPP-563739" diff:add-attr="ref">
+        <transaction-type code="1" diff:insert=""/>
+        <transaction-date diff:insert="" iso-date="2017-12-11" diff:add-attr="iso-date"/>
+        <value diff:insert="" currency="GBP" diff:add-attr="currency;value-date" value-date="2017-12-11">209552</value>
+      </transaction>
+    </iati-activity>
+  </iati-activities>
+  <iati-identifier diff:delete="">GB-COH-GB-COH-01846493-DPSAOPP-563739</iati-identifier>
+  <reporting-org ref="GB-COH-GB-COH-01846493" type="70" secondary-reporter="0" diff:delete="">
+    <narrative diff:delete="">AECOM Limited</narrative>
+  </reporting-org>
+  <title diff:delete="">
+    <narrative diff:delete="">OPP-563739</narrative>
+  </title>
+  <description type="1" diff:delete="">
+    <narrative>SDF Procurement of Pharmaceuticals</narrative>
+  </description>
+  <participating-org ref="1 GB-1 10" type="10" role="1" diff:delete="">
+    <narrative>DFID</narrative>
+  </participating-org>
+  <activity-status code="2" diff:delete=""/>
+  <activity-date iso-date="2017-12-11" type="2" diff:delete=""/>
+  <contact-info type="1" diff:delete="">
+    <organisation diff:delete="">
+      <narrative diff:delete="">AICS - Italian Agency for Cooperation and Development</narrative>
+    </organisation>
+    <telephone diff:delete="">+ 39 06 32492 305</telephone>
+    <email diff:delete="">info@aics.gov.it</email>
+    <mailing-address diff:delete="">
+      <narrative diff:delete="">via Salvatore Contarini 25, 00135 Roma</narrative>
+    </mailing-address>
+  </contact-info>
+  <recipient-country code="SO" percentage="100.00" diff:delete=""/>
+  <sector code="32168" vocabulary="1" percentage="100.00" diff:delete=""/>
+  <collaboration-type code="3" diff:delete=""/>
+  <default-flow-type code="10" diff:delete=""/>
+  <default-finance-type code="110" diff:delete=""/>
+  <default-tied-status code="5" diff:delete=""/>
+  <transaction ref="OPP-563739" diff:delete="">
+    <transaction-type code="1" diff:delete=""/>
+    <transaction-date iso-date="2017-12-11" diff:delete=""/>
+    <value currency="GBP" value-date="2017-12-11" diff:delete="">209552.00</value>
+    <sector code="32168" vocabulary="1" diff:delete=""/>
+    <recipient-country code="SO" diff:delete=""/>
+  </transaction>
+</result>
