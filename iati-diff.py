@@ -10,6 +10,13 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 path_activities = "./activities/"
 path_differences = "./differences/"
 path_datastore = "./datastore/"
+datastore_xml_header = '''<result xmlns:iati-extra="http://datastore.iatistandard.org/ns">\n<ok>True</ok>
+\n<iati-activities generated-datetime='2019-08-20T20:48:00.588612'>\n
+<query>\n
+<total-count>1</total-count>\n
+<start>0</start>\n
+<limit>50</limit>\n
+</query>\n'''
 
 
 def main():
@@ -38,12 +45,32 @@ def main():
 	   output_identifier = output_root.find('iati-identifier')
 	   datastore_xml_url = 'http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=' + output_identifier.text
 	   response = requests.get(datastore_xml_url)
+
 	   with open(path_datastore + output_identifier.text + '.xml', 'wb') as file:
 	   	file.write(response.content)
 
+	   	recording_flag = False
+
+
 	   with open(path_datastore + output_identifier.text + '.xml', 'r', encoding="utf-8") as raw_datastore:
 	   	for line in raw_datastore:
-	   		newf+= line.strip() + '\n'
+	   		if "<iati-activity" in line:
+	   			recording_flag = True
+	   			line = "<iati-activity>"
+
+   			if recording_flag == True:
+	   			if "</iati-activity" in line:
+	   				recording_flag = False
+	   				newf+= "</iati-activity>"
+	   			else:
+	   				newf+= line.strip()+"\n"
+
+
+
+			   			
+
+	   	print('NEW F IS: ', newf)
+
 
 	   with open(path_activities + 'Output_{}.xml'.format(i+1), 'r', encoding="utf-8") as raw_list:
 	   	for line in raw_list:
@@ -57,7 +84,7 @@ def main():
 
 
 	   with open(path_differences + output_identifier.text + '.xml', 'w', encoding="utf-8") as diff_file:
-	   	result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
+	   	result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + 'formatted-' + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
 	   	diff_file.write(result)
 
 
