@@ -90,7 +90,11 @@ def main():
 	   if not os.stat(path_datastore + 'formatted-' + output_identifier.text + '.xml').st_size == 0:
 	   	with open(path_differences + output_identifier.text + '.xml', 'w', encoding="utf-8") as diff_file:
 	   		result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + 'formatted-' + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
+	   		if 'http://namespaces.shoobx.com/diff' in result:
+	   			result = result.replace('http://namespaces.shoobx.com/diff', '')
 	   		diff_file.write(result)
+
+
 
 
 class HTMLFormatter(formatting.XMLFormatter):
