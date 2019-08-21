@@ -6,5 +6,5 @@ debug.txt
 
 # Ignore xml files in subfolders
 acitivites/*
-differences/*
 datastore/*
+diferences/*

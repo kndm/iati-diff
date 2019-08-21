@@ -10,18 +10,11 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 path_activities = "./activities/"
 path_differences = "./differences/"
 path_datastore = "./datastore/"
-datastore_xml_header = '''<result xmlns:iati-extra="http://datastore.iatistandard.org/ns">\n<ok>True</ok>
-\n<iati-activities generated-datetime='2019-08-20T20:48:00.588612'>\n
-<query>\n
-<total-count>1</total-count>\n
-<start>0</start>\n
-<limit>50</limit>\n
-</query>\n'''
 
 
 def main():
 	# LOAD XML AND XSL SCRIPT
-	xml = ET.parse('activity-list(2).xml')
+	xml = ET.parse(sys.argv[1])
 	xsl = ET.parse('activity_style.xsl')
 	xslt_formatting = ET.parse('htmlformatter.xslt')
 	transform = ET.XSLT(xsl)
@@ -56,11 +49,11 @@ def main():
 	   with open(path_datastore + output_identifier.text + '.xml', 'r', encoding="utf-8") as raw_datastore:
 	   	for line in raw_datastore:
 	   		if "<iati-activity" in line:
-	   			if "xmlns:akvo" in line:
-	   				xlmns_namespaces = ' xmlns:akvo="http://akvo.org/iati-activities"'
+	   			if "iati-extra" in line:
+	   				line = line.replace('<iati-activity', '<iati-activity xmlns:iati-extra="http://datastore.iatistandard.org/ns"')
+
 
 	   			recording_flag = True
-	   			line = "<iati-activity" + xlmns_namespaces + ">"
 
    			if recording_flag == True:
 	   			if "</iati-activity" in line:
@@ -127,3 +120,4 @@ def deleteFolders():
 if __name__ == '__main__':
 	createFolders()
 	main()
+	deleteFolders()
