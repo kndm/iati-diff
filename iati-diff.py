@@ -13,8 +13,27 @@ path_datastore = "./datastore/"
 
 
 def main():
+
+	recording_flag = False
+	with open('activity-list-fix.xml', 'w') as new_activity_file:
+		with open(sys.argv[1], 'r') as activity_file:
+			for line in activity_file:
+		   		if "<iati-activity" in line:
+		   			if "iati-extra" in line:
+		   				line = line.replace('<iati-activity', '<iati-activity xmlns:iati-extra="http://datastore.iatistandard.org/ns"')
+
+
+		   			recording_flag = True
+
+	   			if recording_flag == True:
+		   			if "</iati-activity" in line:
+		   				recording_flag = False
+		   				new_activity_file.write("</iati-activity>")
+		   			else:
+		   				new_activity_file.write(line.strip()+"\n")
+				
 	# LOAD XML AND XSL SCRIPT
-	xml = ET.parse(sys.argv[1])
+	xml = ET.parse('activity-list-fix.xml')
 	xsl = ET.parse('activity_style.xsl')
 	xslt_formatting = ET.parse('htmlformatter.xslt')
 	transform = ET.XSLT(xsl)
