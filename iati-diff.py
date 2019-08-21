@@ -50,13 +50,17 @@ def main():
 	   	file.write(response.content)
 
 	   	recording_flag = False
+	   	xlmns_namespaces = ""
 
 
 	   with open(path_datastore + output_identifier.text + '.xml', 'r', encoding="utf-8") as raw_datastore:
 	   	for line in raw_datastore:
 	   		if "<iati-activity" in line:
+	   			if "xmlns:akvo" in line:
+	   				xlmns_namespaces = ' xmlns:akvo="http://akvo.org/iati-activities"'
+
 	   			recording_flag = True
-	   			line = "<iati-activity>"
+	   			line = "<iati-activity" + xlmns_namespaces + ">"
 
    			if recording_flag == True:
 	   			if "</iati-activity" in line:
@@ -83,9 +87,10 @@ def main():
 	   	formatted_list.write(newf2)
 
 
-	   with open(path_differences + output_identifier.text + '.xml', 'w', encoding="utf-8") as diff_file:
-	   	result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + 'formatted-' + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
-	   	diff_file.write(result)
+	   if not os.stat(path_datastore + 'formatted-' + output_identifier.text + '.xml').st_size == 0:
+	   	with open(path_differences + output_identifier.text + '.xml', 'w', encoding="utf-8") as diff_file:
+	   		result = diffile.diff_files(path_activities + 'formatted-' + output_identifier.text + '.xml', path_datastore + 'formatted-' + output_identifier.text + '.xml', formatter=formatter, diff_options={'F': 1, 'ratio_mode':'accurate'})
+	   		diff_file.write(result)
 
 
 class HTMLFormatter(formatting.XMLFormatter):
