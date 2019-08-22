@@ -16,6 +16,7 @@ path_datastore = "./datastore/"
 def main():
 
 	recording_flag = False
+
 	with open('activity-list-fix.xml', 'w') as new_activity_file:
 		with open(sys.argv[1], 'r') as activity_file:
 			for line in activity_file:
@@ -84,11 +85,6 @@ def main():
 	   			else:
 	   				newf+= line.strip()+"\n"
 
-
-
-			   			
-
-	   	print('NEW F IS: ', newf)
 
 
 	   with open(path_activities + 'Output_{}.xml'.format(i+1), 'r', encoding="utf-8") as raw_list:
