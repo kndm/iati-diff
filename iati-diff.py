@@ -1,6 +1,7 @@
 
 import requests, shutil, os, sys
 import logging
+import xml.dom.minidom as prettifier
 from lxml import etree as ET
 from xmldiff import main as diffile
 from xmldiff import formatting
@@ -59,7 +60,9 @@ def main():
 	   response = requests.get(datastore_xml_url)
 
 	   with open(path_datastore + output_identifier.text + '.xml', 'wb') as file:
-	   	file.write(response.content)
+	   	xml_ugly = prettifier.parseString(response.content)
+	   	xml_pretty = xml_ugly.toprettyxml()
+	   	file.write(xml_pretty.encode('utf-8'))
 
 	   	recording_flag = False
 	   	xlmns_namespaces = ""
@@ -139,4 +142,3 @@ def deleteFolders():
 if __name__ == '__main__':
 	createFolders()
 	main()
-	deleteFolders()
