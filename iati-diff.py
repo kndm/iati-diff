@@ -134,7 +134,11 @@ def deleteFolders():
 	if os.path.exists(path_datastore):
 		shutil.rmtree(path_datastore)
 
+	if os.path.isfile('./activity-list-fix.xml'):
+		os.remove('./activity-list-fix.xml')
+
 
 if __name__ == '__main__':
 	createFolders()
 	main()
+	deleteFolders()
