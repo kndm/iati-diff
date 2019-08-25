@@ -16,23 +16,30 @@ path_datastore = "./datastore/"
 def main():
 
 	recording_flag = False
+	activity_start_count = 0
+	query = sys.argv[1] + '&format=xml'
 
 	with open('activity-list-fix.xml', 'w') as new_activity_file:
-		with open(sys.argv[1], 'r') as activity_file:
+		with open('activity-list.xml', 'r') as activity_file:
 			for line in activity_file:
 		   		if "<iati-activity" in line:
+		   			activity_start_count = activity_start_count + 1
 		   			if "iati-extra" in line:
 		   				line = line.replace('<iati-activity', '<iati-activity xmlns:iati-extra="http://datastore.iatistandard.org/ns"')
+		   		
+		   			if activity_start_count > 1:
+		   				line = '\n'
 
 
 		   			recording_flag = True
 
 	   			if recording_flag == True:
-		   			if "</iati-activity" in line:
-		   				recording_flag = False
-		   				new_activity_file.write("</iati-activity>")
+		   			if "</iati-activity" in line or "</iati-activities" in line:
+		   				line = '\n'
+
 		   			else:
 		   				new_activity_file.write(line.strip()+"\n")
+			new_activity_file.write('</iati-activity>')
 				
 	# LOAD XML AND XSL SCRIPT
 	xml = ET.parse('activity-list-fix.xml')
@@ -71,6 +78,7 @@ def main():
 
 	   with open(path_datastore + output_identifier.text + '.xml', 'r', encoding="utf-8") as raw_datastore:
 	   	for line in raw_datastore:
+	   		# TODO, TURN THIS INTO A FUNCTION FOR THE TAGS XMLNS FIX
 	   		if "<iati-activity" in line:
 	   			if "iati-extra" in line:
 	   				line = line.replace('<iati-activity', '<iati-activity xmlns:iati-extra="http://datastore.iatistandard.org/ns"')
