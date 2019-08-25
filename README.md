@@ -19,10 +19,10 @@ All requirements can be currently found in the requirements.txt file and install
 
 IATI-Diff can be run using the following command via command prompt: 
 
-<b>python iati-diff.py filename</b>
+<b>python iati-diff.py "query_to_file"</b>
   
   
-  <c>Filename: XML file to be compared</c>
+  <c>query_to_file: Query to the list of activities, enclosed by quotes. It is downloaded as a XML file to be compared by IATI-Diff.</c>
   
 # Output
 
