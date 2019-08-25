@@ -18,6 +18,10 @@ def main():
 	recording_flag = False
 	activity_start_count = 0
 	query = sys.argv[1] + '&format=xml'
+	query_response = requests.get(query)
+
+	with open('activity-list.xml', 'wb') as activity_query_file:
+		activity_query_file.write(query_response.content)
 
 	with open('activity-list-fix.xml', 'w') as new_activity_file:
 		with open('activity-list.xml', 'r') as activity_file:
