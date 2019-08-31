@@ -1,4 +1,3 @@
-
 import requests, shutil, os, sys
 import logging
 import xml.dom.minidom as prettifier
@@ -116,6 +115,29 @@ def main():
 	   		if 'http://namespaces.shoobx.com/diff' in result:
 	   			result = result.replace('http://namespaces.shoobx.com/diff', '')
 	   		diff_file.write(result)
+	   	header = '''<!DOCTYPE html>
+	   	<html>
+	   	<head>
+	   	<link rel="stylesheet" href="../style.css">
+	   	</head>
+	   	<body>\n'''
+	   	footer = '''</body>
+	   	</html>
+	   	'''
+	   	with open(path_differences + output_identifier.text + '.html', 'w', encoding="utf-8") as mockup_file_result:
+	   		mockup_file_result.write(header)
+	   		with open(path_differences + output_identifier.text + '.xml', 'r', encoding="utf-8") as mockup_file:
+	   			for line in mockup_file:
+	   				if '<' in line:
+	   					line = line.replace('<', '&lt;')
+	   				if '>' in line:
+	   					line = line.replace('>', '&gt;')
+	   				if 'diff:insert' in line:
+	   					line = '<div class="DiffInsert"><pre>' + line + '</pre></div>\n'
+	   				if 'diff:del' in line:
+	   					line = '<div class="DiffDel"><pre>' + line + '</pre></div>\n'
+	   				mockup_file_result.write('<pre>' + line.strip()+'</pre>' + '\n')
+	   		mockup_file_result.write(footer)
 
 
 

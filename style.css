@@ -1,0 +1,7 @@
+div.DiffInsert {
+	background-color: green;
+}
+
+div.DiffDel{
+	background-color: red;
+}
