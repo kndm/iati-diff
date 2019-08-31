@@ -24,7 +24,7 @@ IATI-Diff can be run using the following command via command prompt:
   
   <c>query_to_file: Query to the list of activities, enclosed by quotes. It is downloaded as a XML file to be compared by IATI-Diff.</c>
   
-# Output
+# Output and Visualization
 
-IATI-Diff produces a .xml file with the differences found on each activity compared to its datastore counterpart. The output files can be found in the /differences/ folder, named after its IATI-Identifier.
+IATI-Diff produces a XML file with the differences found on each activity compared to its datastore counterpart, as well as a HTML version for friendly visualization. The output files can be found in the /differences/ folder, named after its IATI-Identifier.
 
