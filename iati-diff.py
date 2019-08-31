@@ -133,8 +133,10 @@ def main():
 	   				if '>' in line:
 	   					line = line.replace('>', '&gt;')
 	   				if 'diff:insert' in line:
+	   					line = line.replace('diff:insert=""', '')
 	   					line = '<div class="DiffInsert"><pre>' + line + '</pre></div>\n'
 	   				if 'diff:del' in line:
+	   					line = line.replace('diff:delete=""', '')
 	   					line = '<div class="DiffDel"><pre>' + line + '</pre></div>\n'
 	   				mockup_file_result.write('<pre>' + line.strip()+'</pre>' + '\n')
 	   		mockup_file_result.write(footer)
