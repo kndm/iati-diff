@@ -136,13 +136,13 @@ def main():
 	   					counter = line.find('&gt;')
 	   					if line[counter+4] != line[-1]:
 	   						counter_closing = line.index('&lt;', counter)
-	   						line = line[:counter+4] + '<div class="DiffInsert"><pre>' + line[counter+4:counter_closing-1] + '</pre></div>\n' + line[counter_closing:]
+	   						line = line[:counter+4] + '<div class="DiffInsert"><pre>' + line[counter+4:counter_closing] + '</pre></div>' + line[counter_closing:]
 	   					line = line.replace('diff:insert=""', '')
 	   				if 'diff:del' in line:
 	   					counter = line.find('&gt;')
 	   					if line[counter+4] != line[-1]:
 	   						counter_closing = line.index('&lt;', counter)
-	   						line = line[:counter+4] + '<div class="DiffDel"><pre>' + line[counter+4:counter_closing-1] + '</pre></div>\n' + line[counter_closing:]
+	   						line = line[:counter+4] + '<div class="DiffDel"><pre>' + line[counter+4:counter_closing] + '</pre></div>' + line[counter_closing:]
 	   					line = line.replace('diff:delete=""', '')
 	   				if 'diff:add-attr' in line:
 	   					line = line.replace('diff:add-attr=', '<div class="DiffInsert"><pre>add-attr=')
