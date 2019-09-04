@@ -1,7 +1,9 @@
 div.DiffInsert {
-	background-color: green;
+	background-color: lime;
+	display: inline-block;
 }
 
 div.DiffDel{
 	background-color: red;
+	display: inline-block;
 }

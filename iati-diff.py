@@ -133,11 +133,20 @@ def main():
 	   				if '>' in line:
 	   					line = line.replace('>', '&gt;')
 	   				if 'diff:insert' in line:
+	   					counter = line.find('&gt;')
+	   					if line[counter+4] != line[-1]:
+	   						counter_closing = line.index('&lt;', counter)
+	   						line = line[:counter+4] + '<div class="DiffInsert"><pre>' + line[counter+4:counter_closing-1] + '</pre></div>\n' + line[counter_closing:]
 	   					line = line.replace('diff:insert=""', '')
-	   					line = '<div class="DiffInsert"><pre>' + line + '</pre></div>\n'
 	   				if 'diff:del' in line:
+	   					counter = line.find('&gt;')
+	   					if line[counter+4] != line[-1]:
+	   						counter_closing = line.index('&lt;', counter)
+	   						line = line[:counter+4] + '<div class="DiffDel"><pre>' + line[counter+4:counter_closing-1] + '</pre></div>\n' + line[counter_closing:]
 	   					line = line.replace('diff:delete=""', '')
-	   					line = '<div class="DiffDel"><pre>' + line + '</pre></div>\n'
+	   				if 'diff:add-attr' in line:
+	   					line = line.replace('diff:add-attr=', '<div class="DiffInsert"><pre>add-attr=')
+	   					line = line + '</pre></div>'
 	   				mockup_file_result.write('<pre>' + line.strip()+'</pre>' + '\n')
 	   		mockup_file_result.write(footer)
 
