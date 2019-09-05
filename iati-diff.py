@@ -1,5 +1,6 @@
 import requests, shutil, os, sys
 import logging
+import re
 import xml.dom.minidom as prettifier
 from lxml import etree as ET
 from xmldiff import main as diffile
@@ -145,8 +146,26 @@ def main():
 	   						line = line[:counter+4] + '<div class="DiffDel"><pre>' + line[counter+4:counter_closing] + '</pre></div>' + line[counter_closing:]
 	   					line = line.replace('diff:delete=""', '')
 	   				if 'diff:add-attr' in line:
-	   					line = line.replace('diff:add-attr=', '<div class="DiffInsert"><pre>add-attr=')
-	   					line = line + '</pre></div>'
+	   					# MAKE A LIST OF THE ATTRIBUTES IN ORDER TO SELECT THEM INDIVIDUALLY IN THE CSS LATER ON
+	   					attribute_selector = re.search('add-attr=\"(.+?)\"', line).group(1)
+	   					attribute_list = attribute_selector.split(";")
+	   					for attribute in attribute_list:
+	   						if str(attribute) in line:
+	   							try:
+	   								attribute_value = re.search(str(attribute) + '=\"(.+?)\"', line).group(1)
+	   								line = re.sub('(diff:add-attr=\".+?\")','', line)
+	   								line = line.replace(attribute, '<div class="DiffInsert"><pre>' + attribute)
+	   								print("Attribute value is: ", attribute_value)
+	   								line = line.replace(attribute_value + '"', attribute_value + '"</pre></div>')
+	   								print("LINE IS: ", line)
+	   								
+	   							except AttributeError:
+	   								# It did not match the regex, likely because the attribute does not have any value and it is a value itself
+	   								line = re.sub('(diff:add-attr=\".+?\")','', line)
+	   								line = line.replace(attribute, '<div class="DiffInsert"><pre>' + attribute + '</pre></div>')
+
+	   					#line = line.replace('diff:add-attr=', '<div class="DiffInsert"><pre>add-attr=')
+	   					#line = line + '</pre></div>'
 	   				mockup_file_result.write('<pre>' + line.strip()+'</pre>' + '\n')
 	   		mockup_file_result.write(footer)
 
@@ -186,4 +205,6 @@ def deleteFolders():
 if __name__ == '__main__':
 	createFolders()
 	main()
-	deleteFolders()
+	'''deleteFolders() disabled for debugging purposes. This method cleans up files that we don't want users to see 
+	but still are necessary for processing the differences.'''
+	#deleteFolders()
