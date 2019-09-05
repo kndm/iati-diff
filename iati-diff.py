@@ -129,6 +129,8 @@ def main():
 	   		mockup_file_result.write(header)
 	   		with open(path_differences + output_identifier.text + '.xml', 'r', encoding="utf-8") as mockup_file:
 	   			for line in mockup_file:
+	   				if 'xmlns:diff=""' in line:
+	   					line = line.replace('xmlns:diff=""', '')
 	   				if '<' in line:
 	   					line = line.replace('<', '&lt;')
 	   				if '>' in line:
@@ -155,9 +157,7 @@ def main():
 	   								attribute_value = re.search(str(attribute) + '=\"(.+?)\"', line).group(1)
 	   								line = re.sub('(diff:add-attr=\".+?\")','', line)
 	   								line = line.replace(attribute, '<div class="DiffInsert"><pre>' + attribute)
-	   								print("Attribute value is: ", attribute_value)
 	   								line = line.replace(attribute_value + '"', attribute_value + '"</pre></div>')
-	   								print("LINE IS: ", line)
 	   								
 	   							except AttributeError:
 	   								# It did not match the regex, likely because the attribute does not have any value and it is a value itself
